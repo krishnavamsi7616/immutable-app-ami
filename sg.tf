@@ -1,7 +1,7 @@
 resource "aws_security_group" "main" {
   name        = "${local.TAG_PREFIX}-sg"
   description = "${local.TAG_PREFIX}-sg"
-  
+
 
   ingress {
     description = "SSH"
