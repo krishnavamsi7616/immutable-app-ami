@@ -11,6 +11,15 @@ resource "aws_security_group" "main" {
     cidr_blocks = ["0.0.0.0/0"]
   }
 
+  ingress {
+    description = "HTTP"
+    from_port   = 80
+    to_port     = 80
+    protocol    = "TCP"
+    cidr_blocks = var.ALLOW_SG_CIDR
+  }
+
+
   egress {
     from_port   = 0
     to_port     = 0
