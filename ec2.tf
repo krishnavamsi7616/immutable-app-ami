@@ -23,8 +23,6 @@ resource "null_resource" "copy-local-artifact" {
   }
 
 
-
-
 resource "null_resource" "ansible" {
   triggers = {
     abc = timestamp()
