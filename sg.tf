@@ -19,7 +19,6 @@ resource "aws_security_group" "main" {
     cidr_blocks = var.ALLOW_SG_CIDR
   }
 
-
   egress {
     from_port   = 0
     to_port     = 0
