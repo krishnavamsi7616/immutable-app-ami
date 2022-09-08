@@ -1,7 +1,7 @@
 resource "aws_security_group" "main" {
   name        = "${local.TAG_PREFIX}-sg"
   description = "${local.TAG_PREFIX}-sg"
-  vpc_id      =  var.VPC_ID
+  vpc_id      =  "vpc-0926850d764d149b5"
 
   ingress {
     description = "SSH"
@@ -16,7 +16,7 @@ resource "aws_security_group" "main" {
     from_port   = 80
     to_port     = 80
     protocol    = "TCP"
-    cidr_blocks = var.ALLOW_SG_CIDR
+    cidr_blocks = ["0.0.0.0/0"]
   }
 
   egress {
